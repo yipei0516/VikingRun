@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour, IPointerClickHandler
+public class SceneSwitcher : MonoBehaviour, IPointerClickHandler
 {
     public int SceneIndexDestination;
 
@@ -13,7 +13,7 @@ public class StartGame : MonoBehaviour, IPointerClickHandler
         //get current scene
         Scene scene = SceneManager.GetActiveScene();
         Debug.Log("Current scene name = " + scene.name + " and scene index = " + scene.buildIndex);
-        
+
 
         //
         SceneManager.LoadScene(SceneIndexDestination);

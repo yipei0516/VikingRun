@@ -14,17 +14,13 @@ public class SpawnFloor : MonoBehaviour
     private float startTime;
     private Vector3 direction, mainDirection = new Vector3(0, 0, 1), otherDirection = new Vector3(1, 0, 0);//x z
 
-
+    private bool destroy;
 
     // Start is called before the first frame update
     void Start()
     {
         previousTilePosition = referenceObject.transform.position;
         startTime = Time.time;
-
-
-
-        //SpawnCoins();
     }
 
     // Update is called once per frame
@@ -46,7 +42,18 @@ public class SpawnFloor : MonoBehaviour
             }
             Vector3 spawnPos = previousTilePosition + distanceBetweenTiles * direction;
             startTime = Time.time;
-            Instantiate(tileToSpawn, spawnPos, Quaternion.Euler(0, 0, 0));
+
+            GameObject ground = Instantiate(tileToSpawn, spawnPos, Quaternion.Euler(0, 0, 0));
+
+            if ((destroy == false) && (Random.value < 0.01))
+            {
+                Destroy(ground);
+                destroy = true;
+            }
+            else if (Random.value >= 0.0)
+            {
+                destroy = false;
+            }
             previousTilePosition = spawnPos;
         }
     }

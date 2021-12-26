@@ -30,7 +30,17 @@ public class SpawnHurdle : MonoBehaviour
 
         Vector3 hurdlePosition = viking.position;
         hurdlePosition.y = 7.8f;
-        Instantiate(hurdles[randomHurdle], hurdlePosition + viking.forward * 20, hurdles[randomHurdle].transform.rotation);
+
+        //x
+        if (viking.transform.forward == new Vector3(1, 0, 0))
+        {
+            Instantiate(hurdles[randomHurdle], hurdlePosition + viking.forward * 20, Quaternion.Euler(0, 90f, 0));
+        }
+        //z
+        if (viking.transform.forward == new Vector3(0, 0, 1))
+        {
+            Instantiate(hurdles[randomHurdle], hurdlePosition + viking.forward * 20, hurdles[randomHurdle].transform.rotation);
+        }
         StartCoroutine(spawnHurdle());
     }
 }

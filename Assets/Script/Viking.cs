@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Viking : MonoBehaviour
 {
     [SerializeField]float speed = 10f;
-    public float JumpingForce = 70f;
+    public float JumpingForce = 100f;
     Rigidbody rb;
     Animator animator, animatorEnemy;
     bool onGround = false, run = false;
@@ -76,7 +76,7 @@ public class Viking : MonoBehaviour
         // jump
         if (Input.GetKey(KeyCode.Space) && onGround) 
         {
-            rb.AddForce(JumpingForce * Vector3.up);
+            rb.AddForce(JumpingForce * transform.up);
             animator.Play("Jump");
             //StartCoroutine(StopJump());
         }
@@ -121,12 +121,10 @@ public class Viking : MonoBehaviour
         if (collision.transform.name == "floor_01_variability_05")
         {
             onGround = true;
-            Debug.Log("on ground = " + collision.transform.name);
         }
         if (collision.transform.name == "floor_01_variability_05(Clone)")
         {
             onGround = true;
-            Debug.Log("on ground = " + collision.transform.name);
         }
 
         //Hurdle
@@ -152,11 +150,10 @@ public class Viking : MonoBehaviour
         }
 
         //Coin
-        if (collision.transform.name == "ShieldCoin(Clone)")
+        if (collision.transform.name == "Viking_Shield (Clone)")
         {
             Destroy(collision.gameObject);
             coin++;
-            Debug.Log(coin);
         }
     }
     
@@ -165,12 +162,10 @@ public class Viking : MonoBehaviour
         if (collision.transform.name == "floor_01_variability_05")
         {
             onGround = true;
-            Debug.Log("on ground = " + collision.transform.name);
         }
         if (collision.transform.name == "floor_01_variability_05(Clone)")
         {
             onGround = true;
-            Debug.Log("on ground = " + collision.transform.name);
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -178,12 +173,10 @@ public class Viking : MonoBehaviour
         if (collision.transform.name == "floor_01_variability_05")
         {
             onGround = false;
-            Debug.Log("on ground = " + collision.transform.name);
         }
         if (collision.transform.name == "floor_01_variability_05(Clone)")
         {
             onGround = false;
-            Debug.Log("on ground = " + collision.transform.name);
         }
     }
 
