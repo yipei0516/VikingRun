@@ -326,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218434379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.15, y: -6.9797, z: -6.393736}
+  m_LocalPosition: {x: 0.5, y: -6.9797, z: -6.393736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1372732411}
@@ -1125,7 +1125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720217762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.056285, y: -6.9797, z: -6.393736}
+  m_LocalPosition: {x: -4.1, y: -6.9797, z: -6.393736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1372732411}
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a1a0a9ae6834e049dc6342f5d3213f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndexDestination: 1
+  SceneIndexDestination: 0
 --- !u!114 &883998850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   target: {fileID: 858288806}
   trailDistance: 5
   heightOffset: 4.5
-  cameraDelay: 0.055
+  cameraDelay: 0.035
 --- !u!1 &995930974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: da4b8ddecbda74c4899cd43a15474fa7, type: 3}
@@ -2010,7 +2010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3019608, g: 0.03137255, b: 0, a: 1}
+  m_Color: {r: 0.5943396, g: 0.47391328, b: 0.23829654, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

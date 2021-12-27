@@ -104,7 +104,7 @@ public class SpawnFloor : MonoBehaviour
         //x
         if (direction == new Vector3(1, 0, 0))
         {
-            Instantiate(hurdles[randomHurdle], s, Quaternion.Euler(270f, 90f, 0), transform);
+            Instantiate(hurdles[randomHurdle], s, Quaternion.Euler(0, 90f, 0), transform);
         }
         //z
         if (direction == new Vector3(0, 0, 1))

@@ -95,7 +95,7 @@ public class Viking : MonoBehaviour
         if (gameover)
         {
             StartCoroutine(GameOver());
-
+            run = false;
             //enemy seize
             if (transform.position.z > enemy.position.z + 2|| transform.position.x > enemy.position.x + 2) 
                 enemy.position += speed * Time.deltaTime * enemy.transform.forward;
