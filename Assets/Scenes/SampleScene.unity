@@ -1643,8 +1643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 858288806}
   trailDistance: 5
-  heightOffset: 4.5
-  cameraDelay: 0.035
+  heightOffset: 4
+  cameraDelay: 0.04
 --- !u!1 &995930974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: da4b8ddecbda74c4899cd43a15474fa7, type: 3}
