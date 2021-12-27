@@ -36,6 +36,7 @@ public class Viking : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+
         enemy = GameObject.FindGameObjectWithTag("Enemy").transform;
         animatorEnemy = enemy.GetComponent<Animator>();
 
@@ -150,7 +151,7 @@ public class Viking : MonoBehaviour
         }
 
         //Coin
-        if (collision.transform.name == "Viking_Shield (Clone)")
+        if (collision.transform.name == "Viking_Shield(Clone)")
         {
             Destroy(collision.gameObject);
             coin++;
